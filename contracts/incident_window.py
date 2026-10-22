@@ -37,6 +37,27 @@ def source_check(source: dict, repository: str) -> None:
         raise gl.vm.UserError("Expected pinned repository URL and SHA-256")
 
 
+def source_excerpt(body: str, quote: str, incident_id: str) -> str:
+    if not isinstance(quote, str) or len(quote) > 1200:
+        raise gl.vm.UserError("Quote outside bounds")
+    if not quote:
+        return ""
+    parts = re.split(r"\s+", quote.strip())
+    if not parts or not parts[0]:
+        raise gl.vm.UserError("Empty quote")
+    identity = r"(?<![A-Za-z0-9_-])" + re.escape(incident_id) + r"(?![A-Za-z0-9_-])"
+    for match in re.finditer(r"\s+".join(re.escape(p) for p in parts), body):
+        exact = match.group()
+        if not re.search(identity, exact):
+            # Include the source line's label when a model quotes only its sentence.
+            a = body.rfind("\n", 0, match.start()) + 1
+            b = body.find("\n", match.end())
+            exact = body[a:b if b != -1 else len(body)]
+        if len(exact) <= 1200 and re.search(identity, exact):
+            return exact
+    raise gl.vm.UserError("Quote must occur in report with its exact incident ID")
+
+
 def check_rows(policy: dict, body: str, rows: typing.Any) -> None:
     if not isinstance(rows, list) or len(rows) != len(policy["incident_ids"]):
         raise gl.vm.UserError("Every declared incident needs one row")
@@ -47,11 +68,7 @@ def check_rows(policy: dict, body: str, rows: typing.Any) -> None:
         if row["scope"] not in ("AFFECTED", "OTHER", "UNKNOWN") or row["state"] not in ("RESTORED", "OPEN", "UNKNOWN"):
             raise gl.vm.UserError("Invalid incident classification")
         for key in ("scope_quote", "start_quote", "end_quote"):
-            quote = row[key]
-            if not isinstance(quote, str) or len(quote) > 1200 or (quote and quote not in body):
-                raise gl.vm.UserError("Quote must occur verbatim in report")
-            if quote and incident_id not in quote:
-                raise gl.vm.UserError("Quote lacks incident ID")
+            row[key] = source_excerpt(body, row[key], incident_id)
         if row["scope"] != "UNKNOWN" and len(row["scope_quote"]) < 12:
             raise gl.vm.UserError("Missing scope evidence")
         for key in ("start", "end"):
@@ -118,6 +135,10 @@ recovery, empty for OPEN/UNKNOWN. Missing start is empty. Each nonempty quote mu
 be an exact contiguous excerpt <=1200 characters containing its incident ID and
 supporting the selected scope/event. Timestamp quotes also contain that exact
 timestamp. UNKNOWN may have empty quotes. Do not take timestamps from other IDs.
+For OPEN specifically: end MUST be "", but end_quote MUST be NONEMPTY and quote
+the source sentence proving the outage continued through the window end. Do not
+clear end_quote merely because end is empty. For UNKNOWN recovery use end="" and
+end_quote="". Keep each incident ID prefix in the quoted source sentence.
 """ + "\nPOLICY: " + encode(policy) + "\nREPORT: " + json.dumps(body)
     result = gl.nondet.exec_prompt(prompt, response_format="json")
     if not isinstance(result, dict) or set(result) != {"rows"}:

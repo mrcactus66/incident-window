@@ -1,0 +1,8 @@
+{
+  "contract": "0x0B3591bD930cD7119C845B1ded6181A705cf9cC3",
+  "method": "register",
+  "args": [
+    "ongoing",
+    "{\"component\": \"Aster API\", \"region\": \"North\", \"start\": \"2026-10-20T10:00:00Z\", \"end\": \"2026-10-20T11:00:00Z\", \"budget_seconds\": 1800, \"incident_ids\": [\"INC-A\"], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/incident-window/a1b9c4c3fcd391a9f68415d1913f035334265e28/examples/ongoing.txt\", \"sha256\": \"c484df39c288cbcd89aa2ca6a80378e2ab57bfe405210651f7a4f256e35b8d41\"}}"
+  ]
+}

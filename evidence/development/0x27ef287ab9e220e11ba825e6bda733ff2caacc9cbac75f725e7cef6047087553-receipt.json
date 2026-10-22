@@ -1,0 +1,138 @@
+{
+  "hash": "0x27ef287ab9e220e11ba825e6bda733ff2caacc9cbac75f725e7cef6047087553",
+  "from_address": "0xD841bF6D8fD34B0925cAeCa82819366EE4C223af",
+  "to_address": "0x0B3591bD930cD7119C845B1ded6181A705cf9cC3",
+  "value": 0,
+  "type": 1,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+      "0xf1C7551292319EE334e2D8A24eAC108Bd4C63b21",
+      "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530",
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43"
+    ],
+    "validator_votes_hash": [
+      "0x12d3a346658135328131c7c4dbfc99036ac8e6d044ae9bad32b5a0a52beadf37",
+      "0xc5b956792bed01d429f4b88d26825f503b23ac73b8016b16a7d3e6adf14552e0",
+      "0xd44119fe9fad1b77af8fd563c5913f19ad184667ffdcde20465c7412e0bf4b64",
+      "0xd6a0c9beeb2817bbcb5e0cbaf5f6d09e41ef130f499916d4af28cae8d740dbbe",
+      "0x0d9a2debe175701ee13246cb3fc7fb6b31c4e02874880a4774690adb1af803d0"
+    ],
+    "validator_votes": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x27ef287ab9e220e11ba825e6bda733ff2caacc9cbac75f725e7cef6047087553",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "b88225ef126e2eb55003c56bf7eb6376d59b22f95df107c390081ccff956c7d1"
+    }
+  ],
+  "calldata": "{\"args\":[\"mrcactus66/incident-window\"]}",
+  "deployed_source_sha256": "88233f539c547766ef8777e07322893859bbe27a2cd5d64889b4c94d4028ff08"
+}

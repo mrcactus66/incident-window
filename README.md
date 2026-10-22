@@ -14,7 +14,9 @@ The leader and validators independently fetch the report and interpret each
 declared incident. They distinguish component/region scope, actual onset, complete
 restoration, an explicitly ongoing outage, and insufficient evidence. Every
 timestamp is an exact UTC source token. Each quote must be verbatim and include
-the incident ID. A validator checks the leader's witnesses, then extracts its own
+the incident ID. Whitespace reflow is resolved to the original span. If a quoted
+sentence omits its ID prefix, its original source line must supply the exact ID;
+another incident's label cannot anchor it. A validator checks the leader's witnesses, then extracts its own
 facts. Different supporting quote spans can agree; different event facts cannot.
 
 After consensus, code clips intervals to the accounting window, sorts and unions
@@ -40,7 +42,7 @@ completed incomplete review needs a new ID and newly frozen evidence to revisit.
 
 ## Reproduce
 
-Python 3.13 was used for 45 direct-mode tests. These exercise the actual SDK and
+Python 3.13 was used for 47 direct-mode tests. These exercise the actual SDK and
 storage, with controlled web/LLM responses. `run_validator()` explicitly tests
 agreement, disagreement, false recovery evidence and malformed proposals. Direct
 mode is not a live multi-validator network.

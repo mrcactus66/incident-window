@@ -1,0 +1,16 @@
+{
+  "budget_seconds": 1800,
+  "component": "Aster API",
+  "end": "2026-10-20T11:00:00Z",
+  "incident_ids": [
+    "INC-A",
+    "INC-B",
+    "INC-C"
+  ],
+  "region": "North",
+  "source": {
+    "sha256": "227223f5c847d7aa8498fa5cee2c0349ee606587f826296b995f857ebe08ca3e",
+    "url": "https://raw.githubusercontent.com/mrcactus66/incident-window/a1b9c4c3fcd391a9f68415d1913f035334265e28/examples/overlap.txt"
+  },
+  "start": "2026-10-20T10:00:00Z"
+}

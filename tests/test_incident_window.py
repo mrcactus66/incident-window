@@ -217,3 +217,22 @@ def test_utc_window_crosses_leap_day_and_midnight(contract, direct_vm):
           "start": a, "end": b, "start_quote": q, "end_quote": q}]
     setup(contract, direct_vm, p, r, q)
     assert review(contract)["downtime_seconds"] == 1800
+
+
+def test_source_line_restores_omitted_incident_label(contract, direct_vm):
+    r = rows(); r[0]["scope_quote"] = r[0]["scope_quote"].removeprefix("INC-A: ")
+    setup(contract, direct_vm, evidence=r)
+    result = review(contract)
+    assert result["rows"][0]["scope_quote"].startswith("INC-A: ")
+    assert result["rows"][0]["scope_quote"] in BODY
+    assert direct_vm.run_validator() is True
+
+
+def test_similar_incident_id_does_not_anchor_another_record(contract, direct_vm):
+    body = BODY.replace("INC-A:", "INC-AB:")
+    r = rows()
+    for k in ("scope_quote", "start_quote", "end_quote"):
+        r[0][k] = r[0][k].replace("INC-A:", "INC-AB:")
+    setup(contract, direct_vm, p=policy(body), evidence=r, body=body)
+    with direct_vm.expect_revert("exact incident ID"):
+        review(contract)
