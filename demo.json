@@ -1,0 +1,75 @@
+{
+  "repository": "mrcactus66/incident-window",
+  "contract_file": "contracts/incident_window.py",
+  "cases": {
+    "overlap": {
+      "report": "examples/overlap.txt",
+      "policy": {
+        "component": "Aster API",
+        "region": "North",
+        "start": "2026-10-20T10:00:00Z",
+        "end": "2026-10-20T11:00:00Z",
+        "budget_seconds": 1800,
+        "incident_ids": [
+          "INC-A",
+          "INC-B",
+          "INC-C"
+        ]
+      },
+      "expected": {
+        "status": "COMPLETE",
+        "downtime_seconds": 2400,
+        "budget_exceeded": true,
+        "intervals": [
+          [
+            0,
+            2400
+          ]
+        ]
+      }
+    },
+    "ongoing": {
+      "report": "examples/ongoing.txt",
+      "policy": {
+        "component": "Aster API",
+        "region": "North",
+        "start": "2026-10-20T10:00:00Z",
+        "end": "2026-10-20T11:00:00Z",
+        "budget_seconds": 1800,
+        "incident_ids": [
+          "INC-A"
+        ]
+      },
+      "expected": {
+        "status": "COMPLETE",
+        "downtime_seconds": 900,
+        "budget_exceeded": false,
+        "intervals": [
+          [
+            2700,
+            3600
+          ]
+        ]
+      }
+    },
+    "mitigated": {
+      "report": "examples/mitigated.txt",
+      "policy": {
+        "component": "Aster API",
+        "region": "North",
+        "start": "2026-10-20T10:00:00Z",
+        "end": "2026-10-20T11:00:00Z",
+        "budget_seconds": 1800,
+        "incident_ids": [
+          "INC-A"
+        ]
+      },
+      "expected": {
+        "status": "INCOMPLETE",
+        "downtime_seconds": 0,
+        "budget_exceeded": false,
+        "intervals": []
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+Synthetic operator-authored fixture. No real service or customer is represented.
+Window ends at 2026-10-20T11:00:00Z.
+
+INC-A: The North region Aster API stopped accepting requests at 2026-10-20T09:50:00Z.
+INC-A: Traffic was rerouted at 2026-10-20T10:05:00Z, but requests still failed.
+INC-A: All North region Aster API requests succeeded again at 2026-10-20T10:20:00Z.
+
+INC-B: The North region Aster API could not serve requests from 2026-10-20T10:10:00Z.
+INC-B: Full service was restored at 2026-10-20T10:40:00Z.
+
+INC-C: Only the South region Aster API was unavailable, from 2026-10-20T10:00:00Z.
+INC-C: South recovered at 2026-10-20T10:55:00Z; North was not affected by INC-C.

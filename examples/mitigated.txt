@@ -1,0 +1,5 @@
+Synthetic operator-authored fixture.
+INC-A: The North region Aster API became unavailable at 2026-10-20T10:10:00Z.
+INC-A: A mitigation was applied at 2026-10-20T10:15:00Z. Some requests still failed.
+INC-A: Monitoring continued; the report does not give a full recovery time or say
+whether the outage continued to the end of the accounting window.

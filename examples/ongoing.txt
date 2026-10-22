@@ -1,0 +1,3 @@
+Synthetic operator-authored fixture.
+INC-A: The North region Aster API became unavailable at 2026-10-20T10:45:00Z.
+INC-A: The North region Aster API remained fully unavailable through 2026-10-20T11:10:00Z.
