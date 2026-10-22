@@ -1,0 +1,26 @@
+{
+  "availability_ppm": 750000,
+  "budget_exceeded": false,
+  "downtime_seconds": 900,
+  "intervals": [
+    [
+      2700,
+      3600
+    ]
+  ],
+  "policy_sha256": "ebc91f3779d5ddd60d52888a651aecada4fd2eadcac9c904ea51b5b43a76ba65",
+  "rows": [
+    {
+      "end": "",
+      "end_quote": "INC-A: The North region Aster API remained fully unavailable through 2026-10-20T11:10:00Z.",
+      "id": "INC-A",
+      "scope": "AFFECTED",
+      "scope_quote": "INC-A: The North region Aster API became unavailable at 2026-10-20T10:45:00Z.",
+      "start": "2026-10-20T10:45:00Z",
+      "start_quote": "INC-A: The North region Aster API became unavailable at 2026-10-20T10:45:00Z.",
+      "state": "OPEN"
+    }
+  ],
+  "status": "COMPLETE",
+  "window_id": "ongoing"
+}

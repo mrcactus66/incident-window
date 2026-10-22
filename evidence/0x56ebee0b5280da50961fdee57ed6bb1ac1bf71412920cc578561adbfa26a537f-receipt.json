@@ -1,0 +1,151 @@
+{
+  "hash": "0x56ebee0b5280da50961fdee57ed6bb1ac1bf71412920cc578561adbfa26a537f",
+  "from_address": "0xD841bF6D8fD34B0925cAeCa82819366EE4C223af",
+  "to_address": "0xa7A0f1157413b1063fCC661d72577C06879632D2",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9",
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0xad7d13f269CeAd4379E64a1A3a0803a827e70B43",
+      "0x40533175AfBbAee2c030F88259Afb5aEDbCF0E05",
+      "0xA712cB25a4002666FA9D09477251f238dD9e06b3"
+    ],
+    "validator_votes_hash": [
+      "0x368f4e5d86a89639a8b0afb1bc9416ebc184679e5dd92e62c766e7d3083e2085",
+      "0x50c738825d0e9d8e271b6b2b99185fde4bac02ad9050a09b16a46c80de7cecba",
+      "0x66042fdae9a5fefa48971f3c912c661a4cced7855dc20ae23bc84e57cd258e77",
+      "0x31294c8c9438eb523f7ef99a68f2bff81a22825e680f76247e53ea1f9ce7ced9",
+      "0x6bb8ab9e9672cc14c88d30c5770369eeeb5fa63faa6f846b07a921d3ded0ccda"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      1,
+      1,
+      5
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "IDLE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x56ebee0b5280da50961fdee57ed6bb1ac1bf71412920cc578561adbfa26a537f",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "8240d43268d83bb0107095f0a9f9339a40adc3068416c31b84843a7da06679fc"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "8240d43268d83bb0107095f0a9f9339a40adc3068416c31b84843a7da06679fc"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "8240d43268d83bb0107095f0a9f9339a40adc3068416c31b84843a7da06679fc"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "8240d43268d83bb0107095f0a9f9339a40adc3068416c31b84843a7da06679fc"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    }
+  ],
+  "calldata": {
+    "args": [
+      "overlap",
+      "{\"component\": \"Aster API\", \"region\": \"North\", \"start\": \"2026-10-20T10:00:00Z\", \"end\": \"2026-10-20T11:00:00Z\", \"budget_seconds\": 1800, \"incident_ids\": [\"INC-A\", \"INC-B\", \"INC-C\"], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/incident-window/432b3a39135dec30b2043d156279f7ff71fd6280/examples/overlap.txt\", \"sha256\": \"227223f5c847d7aa8498fa5cee2c0349ee606587f826296b995f857ebe08ca3e\"}}"
+    ],
+    "method": "register"
+  }
+}

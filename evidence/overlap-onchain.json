@@ -1,0 +1,46 @@
+{
+  "availability_ppm": 333333,
+  "budget_exceeded": true,
+  "downtime_seconds": 2400,
+  "intervals": [
+    [
+      0,
+      2400
+    ]
+  ],
+  "policy_sha256": "58a4519f7053059ad879f142d6dc7ef6f742bf67ce5ade707465c0071b27d393",
+  "rows": [
+    {
+      "end": "2026-10-20T10:20:00Z",
+      "end_quote": "INC-A: All North region Aster API requests succeeded again at 2026-10-20T10:20:00Z.",
+      "id": "INC-A",
+      "scope": "AFFECTED",
+      "scope_quote": "INC-A: The North region Aster API stopped accepting requests at 2026-10-20T09:50:00Z.",
+      "start": "2026-10-20T09:50:00Z",
+      "start_quote": "INC-A: The North region Aster API stopped accepting requests at 2026-10-20T09:50:00Z.",
+      "state": "RESTORED"
+    },
+    {
+      "end": "2026-10-20T10:40:00Z",
+      "end_quote": "INC-B: Full service was restored at 2026-10-20T10:40:00Z.",
+      "id": "INC-B",
+      "scope": "AFFECTED",
+      "scope_quote": "INC-B: The North region Aster API could not serve requests from 2026-10-20T10:10:00Z.",
+      "start": "2026-10-20T10:10:00Z",
+      "start_quote": "INC-B: The North region Aster API could not serve requests from 2026-10-20T10:10:00Z.",
+      "state": "RESTORED"
+    },
+    {
+      "end": "2026-10-20T10:55:00Z",
+      "end_quote": "INC-C: South recovered at 2026-10-20T10:55:00Z; North was not affected by INC-C.",
+      "id": "INC-C",
+      "scope": "OTHER",
+      "scope_quote": "INC-C: Only the South region Aster API was unavailable, from 2026-10-20T10:00:00Z.\nINC-C: South recovered at 2026-10-20T10:55:00Z; North was not affected by INC-C.",
+      "start": "2026-10-20T10:00:00Z",
+      "start_quote": "INC-C: Only the South region Aster API was unavailable, from 2026-10-20T10:00:00Z.",
+      "state": "RESTORED"
+    }
+  ],
+  "status": "COMPLETE",
+  "window_id": "overlap"
+}

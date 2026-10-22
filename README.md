@@ -40,6 +40,23 @@ The stored `policy_sha256` commits to canonical JSON, including the source diges
 Transport, UTF-8, size and hash failures abort and leave review retryable. A
 completed incomplete review needs a new ID and newly frozen evidence to revisit.
 
+## StudioNet evidence
+
+Final deployment: [0xa7A0f1157413b1063fCC661d72577C06879632D2](https://explorer-studio.genlayer.com/address/0xa7A0f1157413b1063fCC661d72577C06879632D2).
+The deployed source matches commit `432b3a3`. The seven zero-value transactions
+and three onchain reads are indexed in [evidence/index.json](evidence/index.json).
+
+| Case | Observed result |
+| --- | --- |
+| `overlap` | COMPLETE; 2,400 seconds, one merged interval, budget exceeded |
+| `ongoing` | COMPLETE; 900 seconds, censored at window end |
+| `mitigated` | INCOMPLETE; no availability conclusion |
+
+All three final reviews reached MAJORITY_AGREE with successful leader execution.
+The overlap review needed one leader rotation. This is majority agreement, not a
+claim that every validator agreed. Earlier unsuccessful runs remain documented
+under [evidence/development](evidence/development/README.md).
+
 ## Reproduce
 
 Python 3.13 was used for 47 direct-mode tests. These exercise the actual SDK and
@@ -72,6 +89,8 @@ Repeat register/review/read for `ongoing` and `mitigated`. Reads and receipts go
 performs at most one write. If a write's outcome is unknown, inspect the existing
 transaction rather than repeating it. `verify_evidence.py` checks saved evidence;
 it is an offline integrity check, not a fresh RPC query.
+The script also refuses the SDK's static consensus-address fallback when live
+address discovery fails; read retries are bounded and signed writes are not retried.
 
 ## Boundaries
 

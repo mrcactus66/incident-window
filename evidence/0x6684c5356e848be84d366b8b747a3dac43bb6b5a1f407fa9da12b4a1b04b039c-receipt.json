@@ -1,0 +1,147 @@
+{
+  "hash": "0x6684c5356e848be84d366b8b747a3dac43bb6b5a1f407fa9da12b4a1b04b039c",
+  "from_address": "0xD841bF6D8fD34B0925cAeCa82819366EE4C223af",
+  "to_address": "0xa7A0f1157413b1063fCC661d72577C06879632D2",
+  "value": 0,
+  "type": 2,
+  "status_name": "ACCEPTED",
+  "result_name": "MAJORITY_AGREE",
+  "leader_only": false,
+  "rotation_count": 0,
+  "num_of_rounds": "1",
+  "last_round": {
+    "round": "0",
+    "leader_index": "0",
+    "votes_committed": "5",
+    "votes_revealed": "5",
+    "appeal_bond": "0",
+    "rotations_left": "3",
+    "result": 6,
+    "round_validators": [
+      "0x892C437da9b9CA0b6017B6f046F58E3526B46ec6",
+      "0xb0925568bFbCF00aADBcA053E6D0E1628ff3d530",
+      "0x17ac0CaefB18205c737e64ee582c9245A28ca1f9",
+      "0x7bf4Ea55363bbe73A4dd5b3900bf03c978A63b6e",
+      "0x5Bbbd7cdD63c0ba7f088038Cb049bDDAbE4F6fd1"
+    ],
+    "validator_votes_hash": [
+      "0xd7c4ee21b6f906b9a34a4d73677e695828a3b8b89a9a35c128368ed839b26779",
+      "0xe75ad2bf378d18a7c6ef97144b2be5041ee2f59ba1535a63a0cd50a90445a3eb",
+      "0xa7035049fa61a34944cb173e68a5be72d8893cf8929a5cec8817c408dd2a0563",
+      "0x1f52d5ca92c7ee0dbc8ed33accea25ce90aaffecec0f9275b545c44296bd4227",
+      "0x3df2900482861608b9b88ae89c091b11778b88245b18483a943b59f2cd0223f9"
+    ],
+    "validator_votes": [
+      5,
+      1,
+      1,
+      1,
+      1
+    ],
+    "validator_votes_name": [
+      "IDLE",
+      "AGREE",
+      "AGREE",
+      "AGREE",
+      "AGREE"
+    ]
+  },
+  "explorer": "https://explorer-studio.genlayer.com/tx/0x6684c5356e848be84d366b8b747a3dac43bb6b5a1f407fa9da12b4a1b04b039c",
+  "executions": [
+    {
+      "mode": "leader",
+      "vote": null,
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "0d55cde13e874f0329704f7809732a0957c05cef2b45c1e4b65947a55e94478e"
+    },
+    {
+      "mode": "validator",
+      "vote": "idle",
+      "execution_result": "ERROR",
+      "genvm_result": {
+        "stderr": "Validator execution cancelled after quorum",
+        "stdout": "",
+        "raw_error": {
+          "fatal": false,
+          "causes": [
+            "VALIDATOR_QUORUM_REACHED"
+          ]
+        },
+        "error_code": "CONSENSUS_VALIDATOR_QUORUM_REACHED"
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": null
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "0d55cde13e874f0329704f7809732a0957c05cef2b45c1e4b65947a55e94478e"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "0d55cde13e874f0329704f7809732a0957c05cef2b45c1e4b65947a55e94478e"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "0d55cde13e874f0329704f7809732a0957c05cef2b45c1e4b65947a55e94478e"
+    },
+    {
+      "mode": "validator",
+      "vote": "agree",
+      "execution_result": "SUCCESS",
+      "genvm_result": {
+        "stderr": "",
+        "stdout": "",
+        "raw_error": null,
+        "error_code": null,
+        "error_description": null
+      },
+      "nondet_disagree": null,
+      "contract_state_hash": "0d55cde13e874f0329704f7809732a0957c05cef2b45c1e4b65947a55e94478e"
+    }
+  ],
+  "calldata": {
+    "args": [
+      "ongoing",
+      "{\"component\": \"Aster API\", \"region\": \"North\", \"start\": \"2026-10-20T10:00:00Z\", \"end\": \"2026-10-20T11:00:00Z\", \"budget_seconds\": 1800, \"incident_ids\": [\"INC-A\"], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/incident-window/432b3a39135dec30b2043d156279f7ff71fd6280/examples/ongoing.txt\", \"sha256\": \"c484df39c288cbcd89aa2ca6a80378e2ab57bfe405210651f7a4f256e35b8d41\"}}"
+    ],
+    "method": "register"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "contract": "0xa7A0f1157413b1063fCC661d72577C06879632D2",
+  "method": "register",
+  "args": [
+    "overlap",
+    "{\"component\": \"Aster API\", \"region\": \"North\", \"start\": \"2026-10-20T10:00:00Z\", \"end\": \"2026-10-20T11:00:00Z\", \"budget_seconds\": 1800, \"incident_ids\": [\"INC-A\", \"INC-B\", \"INC-C\"], \"source\": {\"url\": \"https://raw.githubusercontent.com/mrcactus66/incident-window/432b3a39135dec30b2043d156279f7ff71fd6280/examples/overlap.txt\", \"sha256\": \"227223f5c847d7aa8498fa5cee2c0349ee606587f826296b995f857ebe08ca3e\"}}"
+  ]
+}
